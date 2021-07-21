@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.0.+"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.+'
+
+    testImplementation 'io.cucumber:cucumber-java:6.10.+'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.+'
+    testImplementation 'io.rest-assured:rest-assured:4.4.+'
+}
