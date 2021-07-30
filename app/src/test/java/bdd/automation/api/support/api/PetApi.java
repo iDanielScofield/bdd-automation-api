@@ -28,20 +28,20 @@ public class PetApi {
             get(FIND_PET_BY_STATUS_ENDPOINT);
     }
 
-    public void deletePetByStatus (String status) {
+    public void deletePetByStatus(String status) {
         List<Integer> petsId = given().
             pathParam("status", status).
         when().
             get(FIND_PET_BY_STATUS_ENDPOINT).
         thenReturn().
-            path("id");
+            path("petId");
 
         if(!petsId.isEmpty()) {
             for (Integer petId : petsId) {
-                given().
-                    pathParam("id", petId).
-                delete(PET_ENDPOINT);
+                given().pathParam("id", petId).delete(PET_ENDPOINT);
             }
         }
+
     }
+
 }
