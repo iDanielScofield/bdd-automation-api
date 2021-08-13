@@ -42,4 +42,13 @@ public class UserApi {
                 statusCode(HttpStatus.SC_OK);
         }
     }
+
+    public void deleteUser(User user) {
+        given().
+            pathParam("name", user.getUsername()).
+        when().
+            delete(USER_ENDPOINT).
+        then().
+            statusCode(HttpStatus.SC_OK);
+    }
 }

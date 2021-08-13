@@ -47,7 +47,7 @@ public class StoreStepDefinitions {
         actualOrderResponse.
             then().
                 body("id", is(expectedOrder.getId()),
-                        "petId", is(expectedPet.getId()),
+                        "petId", is(expectedOrder.getId()),
                         "quantity", is(expectedOrder.getQuantity()),
                         "status", is("approved")
                      );

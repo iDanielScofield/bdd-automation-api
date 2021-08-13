@@ -10,7 +10,16 @@ repositories {
 dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.+'
 
+    testImplementation 'io.rest-assured:rest-assured:4.4.+'
+
     testImplementation 'io.cucumber:cucumber-java:6.10.+'
     testImplementation 'io.cucumber:cucumber-junit:6.10.+'
-    testImplementation 'io.rest-assured:rest-assured:4.4.+'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.+'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.+'
+}
+
+test {
+    useJUnitPlatform()
 }
